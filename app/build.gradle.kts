@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    kotlin("kapt")
 }
 
 android {
@@ -49,6 +50,8 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.room.common.jvm)
+    implementation(libs.androidx.room.runtime.jvm)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -58,4 +61,14 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
     // Material Design (BottomNavigationView)
     implementation("com.google.android.material:material:1.11.0")
+
+    // Room runtime
+    implementation("androidx.room:room-runtime:2.6.1")
+
+    // Kotlin Extensions and Coroutines support
+    implementation("androidx.room:room-ktx:2.6.1")
+
+    // For annotation processing (KAPT)
+    kapt("androidx.room:room-compiler:2.6.1")
+
 }
