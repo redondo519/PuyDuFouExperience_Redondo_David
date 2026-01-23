@@ -6,7 +6,13 @@
     <fragment
         android:id="@+id/espectaculosFragment"
         android:name="com.redondo.puydufouexperience.ui.EspectaculosFragment"
-        android:label="Espectáculos" />
+        android:label="Espectáculos" >
+        <!-- Ir a Detalle de Espectaculo -->
+        <action
+            android:id="@+id/action_espectaculosFragment_to_espectaculoDetalleFragment"
+            app:destination="@id/espectaculoDetalleFragment" />
+    </fragment>
+
 
     <fragment
         android:id="@+id/mapaFragment"
@@ -22,5 +28,17 @@
         android:id="@+id/ajustesFragment"
         android:name="com.redondo.puydufouexperience.ui.AjustesFragment"
         android:label="Ajustes" />
+
+    <!-- Detalle de Espectaculo -->
+    <fragment
+        android:id="@+id/espectaculoDetalleFragment"
+        android:name="com.redondo.puydufouexperience.ui.EspectaculoDetalleFragment"
+        android:label="Detalle Espectáculo">
+
+        <argument
+            android:name="espectaculoId"
+            app:argType="integer" />
+    </fragment>
+
 
 </navigation>
