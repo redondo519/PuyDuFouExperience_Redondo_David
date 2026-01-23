@@ -11,6 +11,8 @@ import com.redondo.puydufouexperience.R
 import com.redondo.puydufouexperience.databinding.FragmentEspectaculosBinding
 import com.redondo.puydufouexperience.ui.EspectaculosAdapter
 
+import androidx.navigation.fragment.findNavController
+
 
 class EspectaculosFragment : Fragment(R.layout.fragment_espectaculos) {
 
@@ -33,7 +35,13 @@ class EspectaculosFragment : Fragment(R.layout.fragment_espectaculos) {
 
     private fun setupRecyclerView() {
         adapter = EspectaculosAdapter(emptyList()) { espectaculo ->
+            val action =
+                EspectaculosFragmentDirections
+                    .actionEspectaculosFragmentToEspectaculoDetalleFragment(
+                        espectaculo.id
+                    )
 
+            findNavController().navigate(action)
         }
 
         binding.recyclerEspectaculos.layoutManager =

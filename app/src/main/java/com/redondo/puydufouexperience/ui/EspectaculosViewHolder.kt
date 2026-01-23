@@ -1,6 +1,7 @@
 package com.redondo.puydufouexperience.ui
 
 import androidx.recyclerview.widget.RecyclerView
+import com.redondo.puydufouexperience.R
 import com.redondo.puydufouexperience.databinding.ItemEspectaculoBinding
 import com.redondo.puydufouexperience.model.Espectaculo
 
@@ -15,7 +16,7 @@ class EspectaculosViewHolder(
         binding.Nombre.text = espectaculo.nombre
         binding.Zona.text = espectaculo.zona
         binding.Duracion.text = "${espectaculo.duracionMin} min"
-        binding.imgEspectaculo.setImageResource(espectaculo.imagenResId)
+        binding.imgEspectaculo.setImageResource(espectaculo.imagenResId ?: R.drawable.espectaculo_imagen)
 
         binding.root.setOnClickListener {
             onItemClick(espectaculo)

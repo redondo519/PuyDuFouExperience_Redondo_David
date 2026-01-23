@@ -4,10 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
-import com.redondo.puydufouexperience.R
 import com.redondo.puydufouexperience.data.EspectaculoDatabase
 import com.redondo.puydufouexperience.model.Espectaculo
 import com.redondo.puydufouexperience.repository.EspectaculoRepository
@@ -15,31 +12,27 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-
-class EspectaculosViewModel(application: Application) : AndroidViewModel(application) {
-
+class EspectaculoDetalleViewModel (application: Application) :
+    AndroidViewModel(application) {
     private val repository: EspectaculoRepository
 
-    val listaEspectaculos: LiveData<List<Espectaculo>>
+    private val _espectaculo = MutableLiveData<Espectaculo>()
+    val espectaculo: LiveData<Espectaculo> get() = _espectaculo
 
     init {
-        val dao = EspectaculoDatabase
-            .getDatabase(application)
-            .espectaculoDAO()
-
+        val db = EspectaculoDatabase.getDatabase(application)
+        val dao = db.espectaculoDAO()
         repository = EspectaculoRepository(dao)
-
-        listaEspectaculos = repository.espectaculos.asLiveData()
-
-        viewModelScope.launch(Dispatchers.IO) {
-            repository.inicializarDatos()
-        }
     }
 
-    fun agregarEspectaculo(espectaculo: Espectaculo) =
+    fun cargarEspectaculo(id: Int) {
         viewModelScope.launch(Dispatchers.IO) {
-            repository.agregarEspectaculo(espectaculo)
+            val resultado = repository.obtenerEspectaculoPorId(id)
+            withContext(Dispatchers.Main) {
+                resultado?.let {
+                    _espectaculo.value = it
+                }
+            }
         }
-}
-
-
+    }
+    }
