@@ -8,7 +8,6 @@ import android.widget.Toast
 import androidx.activity.viewModels
 
 import com.redondo.puydufouexperience.databinding.ActivityLoginBinding
-import com.redondo.puydufouexperience.ui.MainActivity
 
 class LoginActivity : AppCompatActivity() {
 

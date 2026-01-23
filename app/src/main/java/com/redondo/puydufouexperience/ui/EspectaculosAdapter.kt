@@ -5,7 +5,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.redondo.puydufouexperience.databinding.ItemEspectaculoBinding
 import com.redondo.puydufouexperience.model.Espectaculo
-import com.redondo.puydufouexperience.ui.EspectaculosViewHolder
 
 class EspectaculosAdapter(
     private var listaEspectaculos: List<Espectaculo>,

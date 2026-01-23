@@ -14,7 +14,7 @@ data class Espectaculo(
     val horarios: String,
     val duracionMin: Int,
     val zona: String,
-    val esFavorito: Boolean = false
+    var esFavorito: Boolean = false
 )
 
 

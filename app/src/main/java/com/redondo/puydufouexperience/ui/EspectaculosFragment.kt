@@ -2,14 +2,11 @@ package com.redondo.puydufouexperience.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.redondo.puydufouexperience.R
 import com.redondo.puydufouexperience.databinding.FragmentEspectaculosBinding
-import com.redondo.puydufouexperience.ui.EspectaculosAdapter
 
 import androidx.navigation.fragment.findNavController
 

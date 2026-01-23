@@ -22,7 +22,12 @@
     <fragment
         android:id="@+id/favoritosFragment"
         android:name="com.redondo.puydufouexperience.ui.FavoritosFragment"
-        android:label="Favoritos" />
+        android:label="Favoritos">
+        <!--ir al detalle de espectaculo-->
+        <action
+            android:id="@+id/action_favoritosFragment_to_espectaculoDetalleFragment"
+            app:destination="@id/espectaculoDetalleFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/ajustesFragment"

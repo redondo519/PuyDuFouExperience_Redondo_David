@@ -19,6 +19,13 @@ class EspectaculoRepository(
         return espectaculoDAO.getById(id)
     }
 
+    suspend fun updateEspectaculo(espectaculo: Espectaculo) {
+        espectaculoDAO.update(espectaculo)
+    }
+
+
+    fun getFavoritos() = espectaculoDAO.getFavoritos()
+
     suspend fun inicializarDatos() {
         espectaculoDAO.deleteAll()
         espectaculoDAO.insertAll(listaInicial())
