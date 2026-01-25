@@ -12,7 +12,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class EspectaculoDetalleViewModel (application: Application) :
+class EspectaculoDetalleViewModel(application: Application) :
     AndroidViewModel(application) {
     private val repository: EspectaculoRepository
 
@@ -35,4 +35,13 @@ class EspectaculoDetalleViewModel (application: Application) :
             }
         }
     }
+
+    //cambia el estado de la variable esFavorito
+    fun toggleFavorito(espectaculo: Espectaculo) {
+        viewModelScope.launch {
+            espectaculo.esFavorito = !espectaculo.esFavorito
+            repository.updateEspectaculo(espectaculo)
+        }
     }
+}
+

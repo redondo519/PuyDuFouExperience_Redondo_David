@@ -24,10 +24,13 @@ interface EspectaculoDAO {
     suspend fun getById(id: Int): Espectaculo?
 
     @Update
-    suspend fun update(espectaculo: Espectaculo)
+    suspend fun updateEspectaculo(espectaculo: Espectaculo)
 
+    /*
     @Query("SELECT COUNT(*) FROM espectaculos")
     suspend fun count(): Int
+
+     */
 
 
     @Query("DELETE FROM espectaculos")

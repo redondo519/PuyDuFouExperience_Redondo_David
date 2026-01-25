@@ -36,7 +36,29 @@ class EspectaculoDetalleFragment : Fragment(R.layout.fragment_espectaculo_detall
         viewModel.espectaculo.observe(viewLifecycleOwner) { espectaculo ->
             mostrarDatos(espectaculo)
         }
+
+        //Observar espectaculo
+        viewModel.espectaculo.observe(viewLifecycleOwner) { espectaculo ->
+            actualizarIconoFavorito(espectaculo.esFavorito)
+
+            binding.btnFavorito.setOnClickListener {
+                viewModel.toggleFavorito(espectaculo)
+            }
+        }
+
     }
+
+
+    //actualizar icono favorito
+    private fun actualizarIconoFavorito(esFavorito: Boolean) {
+        val icono = if (esFavorito) {
+            R.drawable.ic_favorite_filled //relleno
+        } else {
+            R.drawable.ic_favorite_border //solo borde
+        }
+        binding.btnFavorito.setImageResource(icono)
+    }
+
 
     private fun mostrarDatos(espectaculo: Espectaculo) {
         binding.imgDetalle.setImageResource(espectaculo.imagenResId ?: R.drawable.espectaculo_imagen)
