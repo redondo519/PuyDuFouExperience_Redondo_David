@@ -14,7 +14,12 @@ data class Espectaculo(
     val horarios: String,
     val duracionMin: Int,
     val zona: String,
-    var esFavorito: Boolean = false
+    var esFavorito: Boolean = false,
+    val latitud: Double = 39.8567,
+    val longitud: Double = -4.0245
+
+
+
 )
 
 

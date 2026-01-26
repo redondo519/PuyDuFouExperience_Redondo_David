@@ -26,12 +26,6 @@ interface EspectaculoDAO {
     @Update
     suspend fun updateEspectaculo(espectaculo: Espectaculo)
 
-    /*
-    @Query("SELECT COUNT(*) FROM espectaculos")
-    suspend fun count(): Int
-
-     */
-
 
     @Query("DELETE FROM espectaculos")
     suspend fun deleteAll()

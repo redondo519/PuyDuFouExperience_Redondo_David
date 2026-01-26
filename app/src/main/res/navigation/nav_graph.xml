@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:startDestination="@id/espectaculosFragment">
 
+    <!--espectaculos-->
     <fragment
         android:id="@+id/espectaculosFragment"
         android:name="com.redondo.puydufouexperience.ui.EspectaculosFragment"
@@ -13,12 +14,18 @@
             app:destination="@id/espectaculoDetalleFragment" />
     </fragment>
 
-
+    <!--mapa-->
     <fragment
         android:id="@+id/mapaFragment"
         android:name="com.redondo.puydufouexperience.ui.MapaFragment"
-        android:label="Mapa" />
+        android:label="Mapa" >
+        <!--ir al detalle de espectaculo-->
+        <action
+            android:id="@+id/action_mapaFragment_to_espectaculoDetalleFragment"
+            app:destination="@id/espectaculoDetalleFragment" />
+    </fragment>
 
+    <!--favoritos-->
     <fragment
         android:id="@+id/favoritosFragment"
         android:name="com.redondo.puydufouexperience.ui.FavoritosFragment"
@@ -29,6 +36,7 @@
             app:destination="@id/espectaculoDetalleFragment" />
     </fragment>
 
+    <!--ajustes-->
     <fragment
         android:id="@+id/ajustesFragment"
         android:name="com.redondo.puydufouexperience.ui.AjustesFragment"

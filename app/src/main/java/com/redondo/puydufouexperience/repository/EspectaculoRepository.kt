@@ -49,8 +49,8 @@ class EspectaculoRepository(
                 zona = "Zona Central",
                 duracionMin = 120,
                 horarios = "22:30 - 00:30",
-                imagenResId = R.drawable.espectaculo_imagen,
-                esFavorito = true
+                imagenResId = R.drawable.espectaculo_imagen
+
 
             ),
             Espectaculo(
@@ -75,8 +75,8 @@ class EspectaculoRepository(
                 zona = "Zona Central",
                 duracionMin = 90,
                 horarios = "6:30 - 08:00",
-                imagenResId = R.drawable.espectaculo_imagen,
-                esFavorito = true
+                imagenResId = R.drawable.espectaculo_imagen
+
             ),
             Espectaculo(
                 nombre = "El Sueño de Toledo",

@@ -2,6 +2,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- PERMISOS -->
+
+    <!-- Permite a la app conectarse a Internet-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Permite verificar el estado de la connexion-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Permite a la app acceder a la ubicación precisa del usuario (GPS)-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- Permite acceder a la ubicación aproximada (redes Wi-Fi y móviles) -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,6 +22,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PuyDuFouExperience">
+
+        <!-- API KEY GOOGLE MAPS -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCAvTpPlAb79UTS6IHFLGktzmDM39IpgPY" />
+
         <activity
             android:name=".ui.LoginActivity"
             android:exported="true">
@@ -21,8 +38,7 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".ui.MainActivity" />
+        <activity android:name=".ui.MainActivity" />
 
     </application>
 
