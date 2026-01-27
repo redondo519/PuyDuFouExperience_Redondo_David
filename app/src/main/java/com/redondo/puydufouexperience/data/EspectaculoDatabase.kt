@@ -14,7 +14,7 @@ import com.redondo.puydufouexperience.R
 
 @Database(
     entities = [Espectaculo::class],
-    version = 2,
+    version = 3,
     exportSchema = false
 )
 abstract class EspectaculoDatabase : RoomDatabase() {
@@ -34,7 +34,7 @@ abstract class EspectaculoDatabase : RoomDatabase() {
                 )
                     //.addCallback(DatabaseCallback(context))
                     //.fallbackToDestructiveMigration()
-                    .addMigrations(MIGRATION_1_2) //Usar migracion
+                    .addMigrations(MIGRATION_1_2, MIGRATION_2_3) //Usar migraciones
                     .build()
 
                 INSTANCE = instance
@@ -42,7 +42,7 @@ abstract class EspectaculoDatabase : RoomDatabase() {
             }
         }
 
-        //Migrarde version problema con room al cambiar estructura BD
+        //Migrar de  version problema con room al cambiar estructura BD
         val MIGRATION_1_2 = object : Migration(1, 2) {
             override fun migrate(db: SupportSQLiteDatabase) {
 
@@ -57,6 +57,16 @@ abstract class EspectaculoDatabase : RoomDatabase() {
                     """
             ALTER TABLE espectaculos
             ADD COLUMN longitud REAL NOT NULL DEFAULT -4.0245
+            """.trimIndent()
+                )
+            }
+        }
+        val MIGRATION_2_3 = object : Migration(2, 3) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL(
+                    """
+            ALTER TABLE espectaculos
+            ADD COLUMN tipo TEXT NOT NULL DEFAULT 'espectaculo'
             """.trimIndent()
                 )
             }

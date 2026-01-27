@@ -49,9 +49,10 @@ class EspectaculoRepository(
                 zona = "Zona Central",
                 duracionMin = 120,
                 horarios = "22:30 - 00:30",
-                imagenResId = R.drawable.espectaculo_imagen
-
-
+                imagenResId = R.drawable.espectaculo_imagen,
+                latitud = 39.8567,
+                longitud = -4.0245,
+                tipo = "espectaculo"
             ),
             Espectaculo(
                 nombre = "A Pluma y Espada Vrs Corta",
@@ -59,7 +60,10 @@ class EspectaculoRepository(
                 zona = "El Arrabal",
                 duracionMin = 30,
                 horarios = "11:30 - 12:00",
-                imagenResId = R.drawable.espectaculo_imagen
+                imagenResId = R.drawable.espectaculo_imagen,
+                latitud = 39.8580,
+                longitud = -4.0255,
+                tipo = "sintipo"
             ),
             Espectaculo(
                 nombre = "A Pluma y Espada",
@@ -79,12 +83,15 @@ class EspectaculoRepository(
 
             ),
             Espectaculo(
-                nombre = "El Sueño de Toledo",
-                descripcion = "Gran espectáculo nocturno...",
+                nombre = "Los Fogones",
+                descripcion = "Cocina Tradicional de Calidad",
                 zona = "Zona Central",
-                duracionMin = 120,
+                duracionMin = 30,
                 horarios = "22:30 - 00:30",
-                imagenResId = R.drawable.espectaculo_imagen
+                imagenResId = R.drawable.espectaculo_imagen,
+                latitud = 39.8560,
+                longitud = -4.0230,
+                tipo = "restaurante"
             ),
             Espectaculo(
                 nombre = "A Pluma y Espada Vrs Corta",
@@ -95,12 +102,15 @@ class EspectaculoRepository(
                 imagenResId = R.drawable.espectaculo_imagen
             ),
             Espectaculo(
-                nombre = "A Pluma y Espada",
-                descripcion = "Duelo de honor y aventuras...",
+                nombre = "Recuerdos Toledo",
+                descripcion = "Llevate un buen recuerdo",
                 zona = "El Arrabal",
-                duracionMin = 120,
+                duracionMin = 1,
                 horarios = "12:00 - 14:00",
-                imagenResId = R.drawable.espectaculo_imagen
+                imagenResId = R.drawable.espectaculo_imagen,
+                latitud = 39.8571,
+                longitud = -4.0221,
+                tipo = "tienda"
             ),
             Espectaculo(
                 nombre = "El Sueño de Toledo II",

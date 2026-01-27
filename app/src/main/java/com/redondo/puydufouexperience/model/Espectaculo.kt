@@ -16,9 +16,8 @@ data class Espectaculo(
     val zona: String,
     var esFavorito: Boolean = false,
     val latitud: Double = 39.8567,
-    val longitud: Double = -4.0245
-
-
+    val longitud: Double = -4.0245,
+    val tipo: String = "espectaculo" //"restaurante","tienda"
 
 )
 
