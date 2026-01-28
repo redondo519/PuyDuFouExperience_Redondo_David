@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">PuyDuFouExperience</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="espectaculo_imagen">imagen de espectaculo de dos caballos</string>
+    <string name="favorito">icono corazon marcar como favorito</string>
+    <string name="ajustes_idioma">Language</string>
+    <string name="ajustes_notificaciones">Notifications</string>
+    <string name="activar_notificaciones">Enable notifications</string>
+    <string name="ajustes_tema">Theme</string>
+    <string name="tema_claro">Light</string>
+    <string name="tema_oscuro">Dark</string>
+    <string name="notificaciones_activadas">Notifications enabled</string>
+    <string name="notificaciones_desactivadas">Notifications disabled</string>
+</resources>
+

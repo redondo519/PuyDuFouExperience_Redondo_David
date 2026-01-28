@@ -12,6 +12,11 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <!-- Permite acceder a la ubicación aproximada (redes Wi-Fi y móviles) -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- Permite las notificaciones -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <!--receiver android:name="com.redondo.puydufouexperience.ui.RecordatorioReceiver" /-->
+    <!-- Permite las alarmas -->
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
 
     <application
         android:allowBackup="true"

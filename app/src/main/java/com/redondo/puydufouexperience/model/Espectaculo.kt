@@ -11,8 +11,9 @@ data class Espectaculo(
     val nombre: String,
     val descripcion: String,
     val imagenResId: Int? = null,
-    val horarios: String,
-    val duracionMin: Int,
+    val horarios: String = "",
+    val horaInicioMin: Int, //minuto del dia en que comienza
+    val duracionMin: Int, //total de minutos que dura
     val zona: String,
     var esFavorito: Boolean = false,
     val latitud: Double = 39.8567,

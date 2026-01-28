@@ -55,7 +55,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp" />
 
-        <!--Imagen marcar como favorito-->
+        <Button
+            android:id="@+id/btnRecordatorio"
+            android:text="@string/crear_recordatorio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
 
     </LinearLayout>
 </ScrollView>

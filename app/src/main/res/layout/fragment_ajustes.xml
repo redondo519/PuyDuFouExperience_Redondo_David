@@ -5,10 +5,85 @@
     android:layout_height="match_parent"
     tools:context=".ui.AjustesFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Idioma -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/ajustes_idioma"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:id="@+id/rgIdioma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rbEspanol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Español" />
+
+                <RadioButton
+                    android:id="@+id/rbIngles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="English" />
+            </RadioGroup>
+
+            <!-- Notificaciones -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/ajustes_notificaciones"
+                android:textSize="18sp" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchNotificaciones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activar_notificaciones" />
+
+            <!-- Tema -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/ajustes_tema"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:id="@+id/rgTema"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rbClaro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tema_claro" />
+
+                <RadioButton
+                    android:id="@+id/rbOscuro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tema_oscuro" />
+            </RadioGroup>
+
+        </LinearLayout>
+    </ScrollView>
+
 
 </FrameLayout>
+

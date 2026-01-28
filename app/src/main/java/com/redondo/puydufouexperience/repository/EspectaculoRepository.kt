@@ -44,45 +44,6 @@ class EspectaculoRepository(
     private fun listaInicial(): List<Espectaculo> {
         return listOf(
             Espectaculo(
-                nombre = "El Sueño de Toledo",
-                descripcion = "Gran espectáculo nocturno...",
-                zona = "Zona Central",
-                duracionMin = 120,
-                horarios = "22:30 - 00:30",
-                imagenResId = R.drawable.espectaculo_imagen,
-                latitud = 39.8567,
-                longitud = -4.0245,
-                tipo = "espectaculo"
-            ),
-            Espectaculo(
-                nombre = "A Pluma y Espada Vrs Corta",
-                descripcion = "Duelo de honor y aventuras...",
-                zona = "El Arrabal",
-                duracionMin = 30,
-                horarios = "11:30 - 12:00",
-                imagenResId = R.drawable.espectaculo_imagen,
-                latitud = 39.8580,
-                longitud = -4.0255,
-                tipo = "sintipo"
-            ),
-            Espectaculo(
-                nombre = "A Pluma y Espada",
-                descripcion = "Duelo de honor y aventuras...",
-                zona = "El Arrabal",
-                duracionMin = 120,
-                horarios = "12:00 - 14:00",
-                imagenResId = R.drawable.espectaculo_imagen
-            ),
-            Espectaculo(
-                nombre = "El Sueño de Toledo II",
-                descripcion = "Gran espectáculo al amanecer...",
-                zona = "Zona Central",
-                duracionMin = 90,
-                horarios = "6:30 - 08:00",
-                imagenResId = R.drawable.espectaculo_imagen
-
-            ),
-            Espectaculo(
                 nombre = "Los Fogones",
                 descripcion = "Cocina Tradicional de Calidad",
                 zona = "Zona Central",
@@ -91,35 +52,96 @@ class EspectaculoRepository(
                 imagenResId = R.drawable.espectaculo_imagen,
                 latitud = 39.8560,
                 longitud = -4.0230,
-                tipo = "restaurante"
+                tipo = "restaurante",
+                horaInicioMin = 1320
             ),
             Espectaculo(
-                nombre = "A Pluma y Espada Vrs Corta",
-                descripcion = "Duelo de honor y aventuras...",
+                nombre = "Restaurante Italiano",
+                descripcion = "Comida a tu gusto",
                 zona = "El Arrabal",
                 duracionMin = 30,
                 horarios = "11:30 - 12:00",
-                imagenResId = R.drawable.espectaculo_imagen
+                imagenResId = R.drawable.espectaculo_imagen,
+                latitud = 39.8541,
+                longitud = -4.0255,
+                tipo = "restaurante",
+                horaInicioMin = 660
             ),
             Espectaculo(
                 nombre = "Recuerdos Toledo",
                 descripcion = "Llevate un buen recuerdo",
                 zona = "El Arrabal",
                 duracionMin = 1,
-                horarios = "12:00 - 14:00",
+                horarios = "11:00 - 14:00",
                 imagenResId = R.drawable.espectaculo_imagen,
-                latitud = 39.8571,
-                longitud = -4.0221,
-                tipo = "tienda"
+                latitud = 39.8572,
+                longitud = -4.0220,
+                tipo = "tienda",
+                horaInicioMin = 1320
+            ),
+            Espectaculo(
+                nombre = "Tienda Recuerdos",
+                descripcion = "Descubre Toledo sobre ruedas",
+                zona = "Zona Central",
+                duracionMin = 45,
+                horarios = "6:30 - 08:00",
+                imagenResId = R.drawable.espectaculo_imagen,
+                latitud = 39.8547,
+                longitud = -4.0245,
+                tipo = "tienda",
+                horaInicioMin = 360
+            ),
+            Espectaculo(
+                nombre = "El Sueño de Toledo",
+                descripcion = "Gran espectáculo nocturno...",
+                zona = "Zona Central",
+                duracionMin = 130,
+                horarios = "22:30 - 00:30",
+                imagenResId = R.drawable.espectaculo_imagen,
+                latitud = 39.8567,
+                longitud = -4.0245,
+                tipo = "espectaculo",
+                horaInicioMin = 1320
+            ),
+            Espectaculo(
+                nombre = "Espectaculo Toledano",
+                descripcion = "Duelo de honor y aventuras...",
+                zona = "El Arrabal",
+                duracionMin = 40,
+                horarios = "11:30 - 12:00",
+                imagenResId = R.drawable.espectaculo_imagen,
+                latitud = 39.8580,
+                longitud = -4.0255,
+                tipo = "sintipo",
+                horaInicioMin = 660
+            ),
+            Espectaculo(
+                nombre = "A Pluma y Espada",
+                descripcion = "Duelo de honor y aventuras...",
+                zona = "El Arrabal",
+                duracionMin = 90,
+                horarios = "11:00 - 14:00",
+                imagenResId = R.drawable.espectaculo_imagen,
+                latitud = 39.8569,
+                longitud = -4.0249,
+                tipo = "espectaculo",
+                horaInicioMin = 660
             ),
             Espectaculo(
                 nombre = "El Sueño de Toledo II",
                 descripcion = "Gran espectáculo al amanecer...",
                 zona = "Zona Central",
-                duracionMin = 90,
+                duracionMin = 120,
                 horarios = "6:30 - 08:00",
-                imagenResId = R.drawable.espectaculo_imagen
+                imagenResId = R.drawable.espectaculo_imagen,
+                latitud = 39.8569,
+                longitud = -4.0225,
+                tipo = "espectaculo",
+                esFavorito = true,
+                horaInicioMin = 360
+
             )
+
         )
     }
 }

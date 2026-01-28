@@ -1,24 +1,21 @@
 package com.redondo.puydufouexperience.ui
 
+
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
+import android.widget.Button
+import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.redondo.puydufouexperience.R
 import com.redondo.puydufouexperience.databinding.FragmentEspectaculoDetalleBinding
 import com.redondo.puydufouexperience.model.Espectaculo
+import androidx.appcompat.app.AlertDialog
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [EspectaculoDetalleFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+
 class EspectaculoDetalleFragment : Fragment(R.layout.fragment_espectaculo_detalle) {
 
     private var _binding: FragmentEspectaculoDetalleBinding? = null
@@ -27,6 +24,7 @@ class EspectaculoDetalleFragment : Fragment(R.layout.fragment_espectaculo_detall
     private val args: EspectaculoDetalleFragmentArgs by navArgs()
     private val viewModel: EspectaculoDetalleViewModel by viewModels()
 
+    @SuppressLint("ScheduleExactAlarm")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentEspectaculoDetalleBinding.bind(view)
@@ -46,6 +44,37 @@ class EspectaculoDetalleFragment : Fragment(R.layout.fragment_espectaculo_detall
             }
         }
 
+        //Recordatorios
+        val btnRecordatorio = view.findViewById<Button>(R.id.btnRecordatorio)
+
+
+        btnRecordatorio.setOnClickListener {
+
+            val espectaculo = viewModel.espectaculo.value ?: return@setOnClickListener
+
+            val opciones = arrayOf("5 min", "10 min", "15 min", "30 min")
+            val valores = arrayOf(5, 10, 15, 30)
+
+            AlertDialog.Builder(requireContext())
+                .setTitle("Avisar antes de")
+                .setItems(opciones) { _, which ->
+                    RecordatorioManager.programarRecordatorio(
+                        requireContext(),
+                        espectaculo,
+                        valores[which]
+                    )
+
+                    Toast.makeText(
+                        requireContext(),
+                        "Recordatorio creado",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+                .show()
+        }
+
+
+
     }
 
 
@@ -58,6 +87,8 @@ class EspectaculoDetalleFragment : Fragment(R.layout.fragment_espectaculo_detall
         }
         binding.btnFavorito.setImageResource(icono)
     }
+
+
 
 
     private fun mostrarDatos(espectaculo: Espectaculo) {
