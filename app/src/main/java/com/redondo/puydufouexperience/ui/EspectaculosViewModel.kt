@@ -32,10 +32,13 @@ class EspectaculosViewModel(application: Application) : AndroidViewModel(applica
         }
     }
 
+    /*
     fun agregarEspectaculo(espectaculo: Espectaculo) =
         viewModelScope.launch(Dispatchers.IO) {
             repository.agregarEspectaculo(espectaculo)
         }
+
+     */
 }
 
 

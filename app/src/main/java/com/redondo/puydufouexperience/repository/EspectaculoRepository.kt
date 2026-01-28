@@ -34,10 +34,14 @@ class EspectaculoRepository(
     fun getFavoritos() = espectaculoDAO.getFavoritos()
 
 
-    //metodo de inicializacion de atos
+    /**
+     * Inicializa Los espectaculos, solo si la lista esta vacia.
+     */
     suspend fun inicializarDatos() {
-        espectaculoDAO.deleteAll()
-        espectaculoDAO.insertAll(listaInicial())
+        if(espectaculoDAO.count() == 0){
+            espectaculoDAO.insertAll(listaInicial())
+        }
+        //espectaculoDAO.deleteAll()
     }
 
     //Devuelve lista de espectaculos
