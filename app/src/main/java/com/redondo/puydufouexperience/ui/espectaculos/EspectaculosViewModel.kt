@@ -1,4 +1,4 @@
-package com.redondo.puydufouexperience.ui
+package com.redondo.puydufouexperience.ui.espectaculos
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

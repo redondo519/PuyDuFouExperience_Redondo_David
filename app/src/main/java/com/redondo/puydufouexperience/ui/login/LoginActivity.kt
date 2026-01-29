@@ -1,4 +1,4 @@
-package com.redondo.puydufouexperience.ui
+package com.redondo.puydufouexperience.ui.login
 
 import androidx.appcompat.app.AppCompatActivity
 
@@ -8,6 +8,8 @@ import android.widget.Toast
 import androidx.activity.viewModels
 
 import com.redondo.puydufouexperience.databinding.ActivityLoginBinding
+import com.redondo.puydufouexperience.sesion.SessionManager
+import com.redondo.puydufouexperience.ui.main.MainActivity
 
 class LoginActivity : AppCompatActivity() {
 

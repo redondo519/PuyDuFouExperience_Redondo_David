@@ -1,22 +1,20 @@
-package com.redondo.puydufouexperience.ui
+package com.redondo.puydufouexperience.ui.ajustes
 
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
-import androidx.fragment.app.Fragment
 import android.view.View
 import android.view.ViewGroup
-import android.widget.RadioButton
-import android.widget.RadioGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
-import com.google.android.material.switchmaterial.SwitchMaterial
+import androidx.fragment.app.Fragment
 import com.redondo.puydufouexperience.R
 import com.redondo.puydufouexperience.databinding.FragmentAjustesBinding
+import com.redondo.puydufouexperience.sesion.SessionManager
+import com.redondo.puydufouexperience.ui.login.LoginActivity
 import java.util.Locale
-
 
 class AjustesFragment : Fragment() {
 
@@ -123,4 +121,3 @@ class AjustesFragment : Fragment() {
         _binding = null
     }
 }
-

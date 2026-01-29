@@ -6,7 +6,7 @@
     <!--espectaculos-->
     <fragment
         android:id="@+id/espectaculosFragment"
-        android:name="com.redondo.puydufouexperience.ui.EspectaculosFragment"
+        android:name="com.redondo.puydufouexperience.ui.espectaculos.EspectaculosFragment"
         android:label="Espectáculos" >
         <!-- Ir a Detalle de Espectaculo -->
         <action
@@ -17,7 +17,7 @@
     <!--mapa-->
     <fragment
         android:id="@+id/mapaFragment"
-        android:name="com.redondo.puydufouexperience.ui.MapaFragment"
+        android:name="com.redondo.puydufouexperience.ui.mapa.MapaFragment"
         android:label="Mapa" >
         <!--ir al detalle de espectaculo-->
         <action
@@ -28,7 +28,7 @@
     <!--favoritos-->
     <fragment
         android:id="@+id/favoritosFragment"
-        android:name="com.redondo.puydufouexperience.ui.FavoritosFragment"
+        android:name="com.redondo.puydufouexperience.ui.favoritos.FavoritosFragment"
         android:label="Favoritos">
         <!--ir al detalle de espectaculo-->
         <action
@@ -39,13 +39,13 @@
     <!--ajustes-->
     <fragment
         android:id="@+id/ajustesFragment"
-        android:name="com.redondo.puydufouexperience.ui.AjustesFragment"
+        android:name="com.redondo.puydufouexperience.ui.ajustes.AjustesFragment"
         android:label="Ajustes" />
 
     <!-- Detalle de Espectaculo -->
     <fragment
         android:id="@+id/espectaculoDetalleFragment"
-        android:name="com.redondo.puydufouexperience.ui.EspectaculoDetalleFragment"
+        android:name="com.redondo.puydufouexperience.ui.espectaculos.EspectaculoDetalleFragment"
         android:label="Detalle Espectáculo">
 
         <argument

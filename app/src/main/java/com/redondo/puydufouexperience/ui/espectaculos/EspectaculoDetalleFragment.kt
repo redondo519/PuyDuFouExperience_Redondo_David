@@ -1,20 +1,18 @@
-package com.redondo.puydufouexperience.ui
-
+package com.redondo.puydufouexperience.ui.espectaculos
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.redondo.puydufouexperience.R
 import com.redondo.puydufouexperience.databinding.FragmentEspectaculoDetalleBinding
 import com.redondo.puydufouexperience.model.Espectaculo
-import androidx.appcompat.app.AlertDialog
-
-
+import com.redondo.puydufouexperience.notificaciones.RecordatorioManager
 
 class EspectaculoDetalleFragment : Fragment(R.layout.fragment_espectaculo_detalle) {
 

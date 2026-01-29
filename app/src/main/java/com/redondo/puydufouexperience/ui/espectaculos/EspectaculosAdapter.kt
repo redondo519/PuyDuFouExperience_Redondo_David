@@ -1,4 +1,4 @@
-package com.redondo.puydufouexperience.ui
+package com.redondo.puydufouexperience.ui.espectaculos
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

@@ -1,15 +1,11 @@
-package com.redondo.puydufouexperience.ui
+package com.redondo.puydufouexperience.notificaciones
 
-import android.Manifest
 import android.annotation.SuppressLint
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import androidx.annotation.RequiresPermission
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-
-import com.redondo.puydufouexperience.R
 
 class RecordatorioReceiver : BroadcastReceiver() {
 

@@ -1,17 +1,14 @@
-package com.redondo.puydufouexperience.ui
+package com.redondo.puydufouexperience.ui.favoritos
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.redondo.puydufouexperience.data.EspectaculoDAO
 import com.redondo.puydufouexperience.data.EspectaculoDatabase
 import com.redondo.puydufouexperience.model.Espectaculo
 import com.redondo.puydufouexperience.repository.EspectaculoRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-
 
 class FavoritosViewModel(application: Application)
     : AndroidViewModel(application) {
@@ -21,7 +18,7 @@ class FavoritosViewModel(application: Application)
     val listaFavoritos: LiveData<List<Espectaculo>>
 
     init {
-        val dao = EspectaculoDatabase
+        val dao = EspectaculoDatabase.Companion
             .getDatabase(application)
             .espectaculoDAO()
 
@@ -36,5 +33,3 @@ class FavoritosViewModel(application: Application)
             repository.updateEspectaculo(espectaculo)
         }
 }
-
-

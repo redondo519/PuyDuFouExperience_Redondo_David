@@ -1,29 +1,28 @@
-package com.redondo.puydufouexperience.ui
+package com.redondo.puydufouexperience.ui.espectaculos
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.redondo.puydufouexperience.R
-import com.redondo.puydufouexperience.databinding.FragmentFavoritosBinding
+import com.redondo.puydufouexperience.databinding.FragmentEspectaculosBinding
 
-class FavoritosFragment : Fragment(R.layout.fragment_favoritos) {
+class EspectaculosFragment : Fragment(R.layout.fragment_espectaculos) {
 
-    private var _binding: FragmentFavoritosBinding? = null
+    private var _binding: FragmentEspectaculosBinding? = null
     private val binding get() = _binding!!
 
     private lateinit var adapter: EspectaculosAdapter
 
-    private val viewModel: FavoritosViewModel by viewModels()
+
+    private val viewModel: EspectaculosViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        _binding = FragmentFavoritosBinding.bind(view)
+        _binding = FragmentEspectaculosBinding.bind(view)
 
         setupRecyclerView()
         observarViewModel()
@@ -32,22 +31,23 @@ class FavoritosFragment : Fragment(R.layout.fragment_favoritos) {
     private fun setupRecyclerView() {
         adapter = EspectaculosAdapter(emptyList()) { espectaculo ->
             val action =
-                FavoritosFragmentDirections
-                    .actionFavoritosFragmentToEspectaculoDetalleFragment(
+                EspectaculosFragmentDirections
+                    .actionEspectaculosFragmentToEspectaculoDetalleFragment(
                         espectaculo.id
                     )
 
             findNavController().navigate(action)
         }
 
-        binding.recyclerFavoritos.layoutManager =
+        binding.recyclerEspectaculos.layoutManager =
             LinearLayoutManager(requireContext())
 
-        binding.recyclerFavoritos.adapter = adapter
+        binding.recyclerEspectaculos.adapter = adapter
     }
 
     private fun observarViewModel() {
-        viewModel.listaFavoritos.observe(viewLifecycleOwner) { lista ->
+
+        viewModel.listaEspectaculos.observe(viewLifecycleOwner) { lista ->
             adapter.actualizarLista(lista)
         }
     }

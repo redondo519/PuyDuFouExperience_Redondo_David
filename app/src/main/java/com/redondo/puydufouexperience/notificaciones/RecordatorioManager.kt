@@ -1,4 +1,4 @@
-package com.redondo.puydufouexperience.ui
+package com.redondo.puydufouexperience.notificaciones
 
 import android.Manifest
 import android.annotation.SuppressLint

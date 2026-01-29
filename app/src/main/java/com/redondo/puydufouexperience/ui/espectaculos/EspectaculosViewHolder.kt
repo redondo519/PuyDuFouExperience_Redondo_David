@@ -1,4 +1,4 @@
-package com.redondo.puydufouexperience.ui
+package com.redondo.puydufouexperience.ui.espectaculos
 
 import androidx.recyclerview.widget.RecyclerView
 import com.redondo.puydufouexperience.R

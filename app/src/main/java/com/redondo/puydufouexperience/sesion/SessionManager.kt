@@ -1,4 +1,4 @@
-package com.redondo.puydufouexperience.ui
+package com.redondo.puydufouexperience.sesion
 
 import android.content.Context
 
@@ -20,4 +20,3 @@ class SessionManager(context: Context) {
         prefs.edit().clear().apply()
     }
 }
-

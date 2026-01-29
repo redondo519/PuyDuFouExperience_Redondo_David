@@ -1,23 +1,22 @@
-package com.redondo.puydufouexperience.ui
+package com.redondo.puydufouexperience.ui.main
 
 import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import com.redondo.puydufouexperience.R
-import com.redondo.puydufouexperience.databinding.ActivityMainBinding
-
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import com.redondo.puydufouexperience.R
+import com.redondo.puydufouexperience.databinding.ActivityMainBinding
+import com.redondo.puydufouexperience.notificaciones.NotificationUtils
 import java.util.Locale
-
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     // Idioma
     override fun attachBaseContext(newBase: Context) {
-        val prefs = newBase.getSharedPreferences("ajustes", Context.MODE_PRIVATE)
+        val prefs = newBase.getSharedPreferences("ajustes", MODE_PRIVATE)
         val idioma = prefs.getString("idioma", "es") ?: "es"
 
         val locale = Locale.forLanguageTag(idioma)
@@ -44,7 +43,7 @@ class MainActivity : AppCompatActivity() {
 
 
         //Preferencias
-        val prefs = getSharedPreferences("ajustes", Context.MODE_PRIVATE)
+        val prefs = getSharedPreferences("ajustes", MODE_PRIVATE)
 
         // Tema
         when (prefs.getString("tema", "claro")) {
