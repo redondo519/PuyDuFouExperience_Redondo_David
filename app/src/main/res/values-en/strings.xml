@@ -11,5 +11,9 @@
     <string name="tema_oscuro">Dark</string>
     <string name="notificaciones_activadas">Notifications enabled</string>
     <string name="notificaciones_desactivadas">Notifications disabled</string>
+    <string name="crear_recordatorio">Create reminder </string>
+    <string name="ajustes_logout">Logout Button</string>
+    <string name="ajustes_logoutrb">Logout</string>
+
 </resources>
 
